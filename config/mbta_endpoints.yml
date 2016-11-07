@@ -1,0 +1,4 @@
+development:
+  schedule_csv_uri: http://developer.mbta.com/lib/gtrtfs/Departures.csv
+production:
+  schedule_csv_uri: http://developer.mbta.com/lib/gtrtfs/Departures.csv

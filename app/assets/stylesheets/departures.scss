@@ -1,0 +1,20 @@
+$board-font-color: #fbfb7f;
+$static-btn-text-color: #fff;
+$static-btn-bg-color: #565b5f;
+
+.departure-board {
+  color: $board-font-color;
+
+  .table th, .table td {
+    color: $board-font-color;
+  }
+}
+
+.static-btn {
+  background-color: $static-btn-bg-color;
+  bottom: 0;
+  color: $static-btn-text-color;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+}

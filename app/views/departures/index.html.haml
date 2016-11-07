@@ -1,0 +1,34 @@
+= stylesheet_link_tag 'departures'
+.container.departure-board
+  %hr.invisible
+  .row
+    .col-md-3
+      %h5= @display.today_day
+      %h5= @display.today_date
+    .col-md-6.text-md-center
+      %h4 Boston Station Departures
+    .col-md-3.text-md-right
+      %h5 CURRENT TIME
+      %h5= @display.curent_time
+  %hr.invisible
+  %table.table.table-inverse.table-hover
+    %thead
+      %tr
+        %th Time
+        %th Origin
+        %th Destination
+        %th Trip #
+        %th Track #
+        %th Status
+    %tbody
+      - @display.departures.each do |departure|
+        %tr
+          %td= departure.time
+          %td= departure.origin_name
+          %td= departure.destination_name
+          %td= departure.trip
+          %td= departure.track
+          %td= departure.status
+%hr.invisible
+%hr.invisible
+= link_to 'Fetch Latest Departures', schedule_import_index_path, class: 'btn btn-secondary static-btn'
