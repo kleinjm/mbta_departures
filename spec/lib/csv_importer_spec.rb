@@ -13,8 +13,8 @@ describe CsvImporter do
     it 'imports all of the records in the file' do
       CsvImporter.new(uri: SCHEDULE_CSV_URI).import
 
-      expect(Departure.count).to eq 12
-      expect(Stop.count).to eq 14
+      expect(Departure.count).to eq 4
+      expect(Stop.count).to eq 6
     end
   end
 
