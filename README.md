@@ -1,24 +1,15 @@
-# README
+## MBTA Departures
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple app which fetches and parses upcoming MBTA train departures. The data
+source is pulled from the developer portal for the MBTA.
 
-Things you may want to cover:
+![Preview](./app/assets/images/preview.png)
 
-* Ruby version
+### Purpose
 
-* System dependencies
+This app is build as a demonstration of CSV parsing backed by good OOD. It is simple,
+however, the principles demonstrate a solid understanding of OOD concepts and relational data.
 
-* Configuration
+The app is built to model a display board found in a real station such as North Staion, shown below.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![North Station Board](./app/assets/images/north_station.jpg)
