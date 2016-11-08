@@ -15,6 +15,7 @@ class DepartureDisplay
     (departure.scheduled_time + departure.lateness.seconds).strftime('%l:%M %p')
   end
 
+  # return the track number or placeholder
   def track
     departure.track_number ? departure.track_number : TRACK_PLACEHOLDER
   end

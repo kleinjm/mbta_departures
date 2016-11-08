@@ -12,7 +12,6 @@ module MbtaDepartures
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.autoload_paths += Dir["#{config.root}/lib/**/"]
     config.autoload_paths += Dir["#{config.root}/facades/**/"]
 
     config.time_zone = 'Eastern Time (US & Canada)'
