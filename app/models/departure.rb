@@ -1,5 +1,5 @@
 # Models a single departure
-class Departure < ActiveRecord::Base
+class Departure < ApplicationRecord
   STATUSES = [
     'On Time', 'Cancelled', 'Arriving', 'End', 'Now Boarding',
     'Info to follow', 'Arrived', 'All Aboard', 'TBD', 'Departed', 'Delayed',
