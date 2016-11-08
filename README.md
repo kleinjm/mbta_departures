@@ -3,6 +3,8 @@
 A simple app which fetches and parses upcoming MBTA train departures. The data
 source is pulled from the developer portal for the MBTA.
 
+See [Demo](https://departures-mbta.herokuapp.com/) hosted on [Heroku](https://www.heroku.com/).
+
 ![Preview](./app/assets/images/preview.png)
 
 ### Purpose
