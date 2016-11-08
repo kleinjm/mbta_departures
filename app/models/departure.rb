@@ -14,5 +14,5 @@ class Departure < ActiveRecord::Base
   validates :scheduled_time, presence: true
   validates :status, inclusion: { in: STATUSES }
 
-  validates :trip, uniqueness: { scope: [:origin, :destination] }
+  validates :trip, uniqueness: { scope: [:origin_id, :destination_id] }
 end

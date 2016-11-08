@@ -1,0 +1,13 @@
+TimeStamp,Origin,Trip,Destination,ScheduledTime,Lateness,Track,Status
+1478487237,"North Station","2161","Newburyport",1478488800,0,,"On Time"
+1478487237,"North Station","2211","Haverhill",1478493000,0,,"On Time"
+1478487237,"North Station","2113","Rockport",1478493000,0,,"On Time"
+1478487237,"North Station","2413","Fitchburg",1478493000,0,,"On Time"
+1478487237,"North Station","2315","Lowell",1478493000,0,,"On Time"
+1478487237,"South Station","2015","Middleboro/Lakeville",1478489700,0,,"On Time"
+1478487237,"South Station","2517","Worcester / Union Station",1478490000,0,,"On Time"
+1478487237,"South Station","2041","Kingston",1478490300,0,,"On Time"
+1478487237,"South Station","2783","Readville",1478490600,0,,"On Time"
+1478487237,"South Station","2085","Greenbush",1478490900,0,,"On Time"
+1478487237,"South Station","2817","Providence",1478491800,0,,"On Time"
+1478487237,"South Station","2719","Forge Park / 495",1478492400,0,,"On Time"

@@ -1,3 +1,5 @@
+test:
+  schedule_csv_uri: ./spec/support_files/departures_sample.csv
 development:
   schedule_csv_uri: http://developer.mbta.com/lib/gtrtfs/Departures.csv
 production:
