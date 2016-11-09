@@ -1,8 +1,9 @@
-require 'csv'
-require 'open-uri'
-
 # Handles importing for the given schedule CSV URI
 class CsvImporter
+  require 'csv'
+  require 'open-uri'
+
+  LOCALE = 'lib.csv_importer'.freeze
   LOGGER_PATH = '/log/csv_importer.log'.freeze
 
   # take in the uri of the csv to be parsed
@@ -16,15 +17,14 @@ class CsvImporter
   def import
     CSV.new(open(uri), headers: :first_row).each_with_index do |csv_row, i|
       begin
-        next unless validate_row(csv_row: csv_row, index: i)
-
         create_departure(csv_row: csv_row)
       rescue => e
         # this is a catch all for all the types of parsing errors that could
         # occur above
         csv_logger.info(
-          "Error parsing CSV format incorrect on row #{i}. Error #{e}"
+          I18n.t('import_exception', scope: LOCALE, row_number: i)
         )
+        csv_logger.error(e)
       end
     end
   end
@@ -32,13 +32,6 @@ class CsvImporter
   private
 
   attr_reader :uri
-
-  # is this a valid row? Logs error and returns false if not
-  def validate_row(csv_row:, index:)
-    return true if csv_row.count == 8
-    csv_logger.info("Wrong number of CSV columns row #{index}")
-    false
-  end
 
   # return a departure record created from the given row
   def create_departure(csv_row:)
@@ -70,7 +63,8 @@ class CsvImporter
   def save_departure(departure:)
     return if departure.save
     csv_logger.info(
-      "Departure failed to save with errors: #{departure.errors.full_messages}"
+      I18n.t('departure_save_exception',
+             scope: LOCALE, errors: departure.errors.full_messages)
     )
   end
 

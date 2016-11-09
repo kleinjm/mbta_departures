@@ -23,3 +23,7 @@ en:
   controller:
     schedule_import:
       success: Latest schedule imported
+  lib:
+    csv_importer:
+      import_exception: Error parsing CSV format incorrect on row %{row_number}.
+      departure_save_exception: "Departure failed to save with errors: %{errors}"

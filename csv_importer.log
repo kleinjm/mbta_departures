@@ -1,0 +1,2 @@
+# Logfile created on 2016-11-08 21:39:35 -0500 by logger.rb/54362
+I, [2016-11-08T21:39:35.644827 #67962]  INFO -- : Departure failed to save with errors: ["Status is not included in the list"]

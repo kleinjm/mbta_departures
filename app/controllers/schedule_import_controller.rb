@@ -1,4 +1,6 @@
 class ScheduleImportController < ApplicationController
+  require './lib/csv_importer.rb'
+
   # GET index
   # import the latest schedule info and retirect to the departure board
   def index
