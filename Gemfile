@@ -45,13 +45,14 @@ group :development do
 end
 
 group :test do
-  gem 'capybara' # feature specs
+  gem 'capybara', '~> 2.10.1' # feature specs
   # headless browser and JS framework with capybara. Requires QT5+
   gem 'capybara-webkit', '~> 1.1.0'
   gem 'database_cleaner', '~> 1.5.3'
-  gem 'factory_girl'
+  gem 'factory_girl', '~> 4.7.0'
+  gem 'launchy', '~> 2.4.3' # provide save_and_open_page in feature specs
   gem 'rails-controller-testing', '~> 1.0.1'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5.2'
   gem 'shoulda-matchers', '~> 3.1.1'
 end
 
