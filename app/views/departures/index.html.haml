@@ -22,14 +22,14 @@
         %th Track #
         %th Status
     %tbody
-      - @display.departures.each do |departure|
+      - @display.departures.each do |departure_display|
         %tr
-          %td= departure.time
-          %td= departure.origin_name
-          %td= departure.destination_name
-          %td= departure.trip
-          %td= departure.track
-          %td= departure.status
+          %td= departure_display.time
+          %td= departure_display.departure.origin.stop_name
+          %td= departure_display.departure.destination.stop_name
+          %td= departure_display.departure.trip
+          %td= departure_display.track
+          %td= departure_display.departure.trip
 %hr.invisible
 %hr.invisible
 = link_to 'Fetch Latest Departures', schedule_import_index_path, class: 'btn btn-secondary static-btn'
