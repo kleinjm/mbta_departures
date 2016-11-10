@@ -24,10 +24,12 @@ module CsvTimeUpdaterSupport
     new_path
   end
 
+  # copy the old file to the new one at the original path with an
+  # updated timestamp
   def build_new_file(old_file_path:)
-    headers = CSV.read(old_file_path, 'r+').first
+    headers = CSV.read(old_file_path, 'r').first
 
-    CSV.open(ORIGINAL_FULL_PATH, 'w+') do |csv|
+    CSV.open(ORIGINAL_FULL_PATH, 'w') do |csv|
       csv << headers
       CSV.foreach(old_file_path, headers: true).with_index(0) do |row, i|
         row['ScheduledTime'] = i.hour.from_now.strftime('%s')

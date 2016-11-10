@@ -1,5 +1,5 @@
 TimeStamp,Origin,Trip,Destination,ScheduledTime,Lateness,Track,Status
-1478748803,North Station,2411,Fitchburg,1478749388,0,123,On Time
-1478752403,North Station,2313,Lowell,1478752988,0,,On Time
-1478756003,South Station,2817,Providence,1478756588,0,456,On Time
-1478759603,South Station,2719,Forge Park / 495,1478760188,0,,On Time
+1478748803,North Station,2411,Fitchburg,1478749588,0,123,On Time
+1478752403,North Station,2313,Lowell,1478753188,0,,On Time
+1478756003,South Station,2817,Providence,1478756788,0,456,On Time
+1478759603,South Station,2719,Forge Park / 495,1478760388,0,,On Time

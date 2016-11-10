@@ -3,7 +3,7 @@ include CsvTimeUpdaterSupport
 
 # Integration spec for fetching latest departure
 feature 'fetch latest departures' do
-  scenario 'from csv' do
+  scenario 'deletes old departures and imports and displays new ones' do
     update_departure_sample_timestamps
     old_departure = create :departure, track_number: 9999
 
